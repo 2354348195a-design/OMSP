@@ -25,4 +25,4 @@ You can install the package directly from GitHub:
 
 ```r
 # install.packages("devtools") # if not installed
-devtools::install_github("your-github-username/OSSP")
+devtools::install_github("2354348195a-design/OSSP")
