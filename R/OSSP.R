@@ -24,7 +24,7 @@
 #' }
 #'
 #' @export
-multiomics_pipeline <- function(mydatGE, mydatME, mydatMI, survival,
+OSSP <- function(mydatGE, mydatME, mydatMI, survival,
                                 K = 7, lap_type = 3, diffusion_iter = 4,
                                 seed = 11111) {
 
