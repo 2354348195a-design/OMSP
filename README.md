@@ -1,5 +1,3 @@
-<img width="1810" height="688" alt="db7eca6b9618bbd4558dd016edfc54cb" src="https://github.com/user-attachments/assets/8d51cb83-e2a1-4a47-a998-69cb9d08bdf2" /># OSSP
-
 **OSSP** (Multi-omics integration via Spectral decomposition on Self-diffusion network) is an R package implementing an unsupervised framework for integrating cancer multi-omics data.
 
 ---
