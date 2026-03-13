@@ -122,3 +122,27 @@ OSSP <- function(mydatGE, mydatME, mydatMI, survival,
     sil = sil
   ))
 }
+
+#计算基于相似性矩阵的轮廓系数 
+silhouette_SimilarityMatrix <- function(group, Sim) {
+  Sim <- as.matrix(Sim)
+  n <- nrow(Sim)
+  if (length(unique(group)) < 2) return(rep(0, n))
+  
+  sil_values <- sapply(1:n, function(i) {
+    same_group <- which(group == group[i])
+    same_group <- same_group[same_group != i]
+    ai <- if(length(same_group) > 0) mean(Sim[i, same_group]) else 0
+    
+    other_groups <- unique(group[group != group[i]])
+    bi <- max(sapply(other_groups, function(g) mean(Sim[i, group == g])))
+    
+    denom <- max(ai, bi)
+    if (denom == 0) return(0)
+    return((ai - bi) / denom)
+  })
+  
+  res <- cbind(cluster = group, neighbor = NA, sil_width = sil_values)
+  class(res) <- "silhouette"
+  return(res)
+}
