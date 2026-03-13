@@ -1,11 +1,20 @@
 Package: OSSP
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Multi-omics Integration via Spectral Decomposition on Self-diffusion Network
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Duanx", "Lab", role = c("aut", "cre"), email = "your.email@example.com")
+Description: OSSP is an unsupervised framework for integrating cancer multi-omics data. 
+    It uses self-diffusion to enhance similarity networks and spectral decomposition 
+    for feature integration and patient subtyping.
+License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
+Imports: 
+    survival,
+    cluster,
+    stats,
+    graphics,
+    grDevices
+Remotes: 
+    bioc::survcomp
